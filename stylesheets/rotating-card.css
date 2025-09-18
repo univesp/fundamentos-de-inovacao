@@ -1,0 +1,401 @@
+/* ////////////////////////
+FLIP
+/////////////////////// */
+.btn:hover,
+.btn:focus,
+.btn:active{
+  outline: 0 !important;
+}
+/* entire container, keeps perspective */
+.card-container {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+  margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+/* flip speed goes here */
+.card {
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  -o-transition: -o-transform .5s;
+  transition: transform .5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  /* background: red; */
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+  z-index: 3;
+  min-height: 100%;
+}
+
+/* //////////////////
+STYLE
+///////////////// */
+
+.card-container {
+  width: 700px;
+  min-height: 350px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.card{
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+.front, .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.front {
+  padding: 98px;
+  height: 100%;
+  position: absolute;
+}
+
+.back {
+  padding: 2rem;
+  position: relative;
+}
+
+.card-questao {
+  height: 350px;
+}
+
+.card .conceito {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card .conceito2 {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.card .definicao {
+  font-size: 1.4rem;
+  line-height: 28px;
+  margin: 2rem 6rem;
+  text-align: center;
+  color: #0F51AD;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-simple{
+  opacity: .8;
+  color: #666666;
+  background-color: transparent;
+}
+
+.btn-simple:hover,
+.btn-simple:focus{
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+.btn-simple i{
+  font-size: 16px;
+}
+
+h6{
+  font-weight: 700;
+}
+
+.respostas:disabled div {
+  opacity: .5;
+}
+
+
+
+/* //////////////////////
+BACKGROUND DOS CARDS
+/////////////////////// */
+
+.fundo-papel {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.fundo-card-questao {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card-faixa {
+  position: absolute;
+  height: 100%;
+}
+
+.faixa-dir {
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+.card-item {
+  position: absolute;
+  height: 150px;
+  margin-top: 0px;
+    margin-right: 200px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.card-quest-item {
+  position: absolute;
+  height: 100px;
+    margin-top: 0px;
+    margin-right: 60px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.card-num-up {
+  left: 0;
+}
+
+.card-num-dn {
+  right: 0;
+  bottom: 0;
+}
+
+.card-fill-up {
+  right: 0;
+}
+
+.card-fill-dn {
+  left: 0;
+  bottom: 0;
+}
+
+#card1, #card-quest-1 { color: #245939 }
+#card2, #card-quest-2 { color: #245939 }
+#card3, #card-quest-3 { color: #245939 }
+#card4, #card-quest-4 { color: #245939 }
+#card5, #card-quest-5 { color: #245939 }
+#card6, #card-quest-6 { color: #245939 }
+#card7, #card-quest-7 { color: #245939 }
+#card8, #card-quest-8 { color: #245939 }
+
+#card1 .fundo-card-questao, #card-quest-1 .fundo-card-questao  { background-color: #0F51AD; }
+#card2 .fundo-card-questao, #card-quest-2 .fundo-card-questao  { background-color: #0F51AD; }
+#card3 .fundo-card-questao, #card-quest-3 .fundo-card-questao  { background-color: #0F51AD; }
+#card4 .fundo-card-questao, #card-quest-4 .fundo-card-questao  { background-color: #0F51AD; }
+#card5 .fundo-card-questao, #card-quest-5 .fundo-card-questao  { background-color: #0F51AD; }
+#card6 .fundo-card-questao, #card-quest-6 .fundo-card-questao  { background-color: #0F51AD; }
+#card7 .fundo-card-questao, #card-quest-7 .fundo-card-questao  { background-color: #0F51AD; }
+#card8 .fundo-card-questao, #card-quest-8 .fundo-card-questao  { background-color: #0F51AD; }
+
+
+
+#card1 .back { border: 20px solid #0F51AD; }
+#card2 .back { border: 20px solid #0F51AD; }
+#card3 .back { border: 20px solid #0F51AD; }
+#card4 .back { border: 20px solid #0F51AD; }
+#card5 .back { border: 20px solid #0F51AD; }
+#card6 .back { border: 20px solid #0F51AD; }
+#card7 .back { border: 20px solid #0F51AD; }
+#card8 .back { border: 20px solid #0F51AD; }
+
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+/* .fundo-papel {
+  display: none;
+} */
+
+  .front, .back{
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+
+  .back {
+    visibility: hidden;
+    -transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+  }
+  .front{
+    z-index: 4;
+  }
+  .card-container:not(.manual-flip):hover .back,
+  .card-container.manual-flip.hover .back{
+    z-index: 5;
+    visibility: visible;
+  }
+}
+
+/* Alteração na velocidade da animação */
+.shake {
+  animation-duration: .65s;
+}
+
+.pulse {
+  animation-duration: .7s;
+}
+
+.pulsinho {
+  animation-duration: .4s;
+}
+
+
+/* Media queries */
+@media (max-width: 1199px) {
+  .card-quest-item {
+    margin-top: 0px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card .conceito {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+.card-container{
+  width: 100%;
+  margin: 15px;
+}
+
+.card .definicao {
+  margin: 0 3rem;
+}
+
+.card-questao {
+  margin-bottom: 2rem;
+  height: 150px;
+}
+
+.front {
+  padding: 120px 50px;
+}
+
+.card-questao .front {
+  padding: 0;
+}
+
+.texto-resposta {
+  margin-left: 0;
+}
+
+.card-faixa {
+  display: none;
+}
+
+.card-item {
+  margin: 0 50px;
+}
+
+.card-quest-item {
+  margin-top: 0px;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    margin-left: 2%;
+  height: 70px;
+}
+
+.card-quest-item.card-num-dn, .card-quest-item.card-fill-dn {
+  display: none;
+}
+
+.card-questao p {
+  /*margin-top: 50px;*/
+}
+
+@media (max-width: 575px) {
+
+  .card .conceito {
+    font-size: 1.3rem;
+  }
+.card .conceito2 {
+    font-size: 1.2rem;
+    padding: 17%;
+}
+  .card .definicao {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .front {
+    padding: 110px 40px;
+  }
+
+  .card-item {
+    margin: 0 40px;
+    height: 130px;
+  }
+
+  .titulo-h {
+    padding: 0;
+  }
+
+}

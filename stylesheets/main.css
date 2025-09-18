@@ -1,0 +1,564 @@
+body {
+  overflow-x: hidden;
+  margin-top: 0px;
+  background-color: #DDE5E8;
+  /* background-color: #fff; */
+}
+/* Estilos para fixação do footer sempre embaixo */
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.Site-content {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+p {
+  margin: 0;
+}
+.myButton {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  background-color:#0F51AD;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:1.5rem;
+  padding:15px 41px;
+  text-decoration:none;
+  border:0;
+  margin-top: 3%;
+}
+.myButton2 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  background-color:#0F51AD;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:1.5rem;
+  padding:15px 41px;
+  text-decoration:none;
+  border:0;
+}
+.myButton:hover {
+  background-color:#0F51AD;
+  border: 0;
+}
+.btn-default:hover {
+  background-color:#0F51AD;
+  border: 0;
+  color: white;
+  font-weight: 700;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+  border: 0;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+}
+.titulo{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 2%;
+  color: #0F51AD;
+}
+.faixa {
+  display: inline-block;
+  margin-right: 30px;
+  width: 40px;
+  height: 90px;
+}
+
+h4 {
+  font-family: 'Titillium Web', sans-serif;
+  color:#0F51AD;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.dropdown-menu {
+  background-color: #0F51AD;
+}
+
+.instrucao {
+  margin: 0;
+  height: 4rem;
+}
+
+.questionarios {
+  margin-bottom: 2rem;
+}
+
+.intro{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 19px;
+
+}
+
+.intro-2{
+    margin-top: 0rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+
+}
+.intro-3 {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 19px;
+
+}
+.respostas {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.texto-resposta {
+  cursor: pointer;
+}
+
+.respostas.ativa {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1rem;
+}
+
+
+.definicoes {
+  min-height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.atalho-numerico {
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid #0f51ad;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f51ad;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+.atalho-numerico p {
+  border:0;
+}
+.texto-resposta {
+  display: flex;
+  width: 100%;
+  padding: .5rem 1rem;
+  text-align: left;
+  margin-left: 1rem;
+  background-color: #c5d3de;
+  border-radius: 5px;
+  font-size: 1.15rem
+}
+
+.sticker {
+  z-index: 10;
+}
+.card-altura{
+  height: 420px;
+}
+
+#btnContinuar {
+  display: none;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.bg-light {
+  background-color: #0F51AD !important;
+}
+.btn-default {
+  background-color:#0F51AD;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:1.5rem;
+  padding:15px 41px;
+  text-decoration:none;
+  border:0;
+  margin-top: 3%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.btn-group-lg {
+  color: #aaaaaa;
+  padding: 2rem 3rem; !important
+  font-size: 1.25rem;
+  line-height: 0.25;
+  border-color: #aaaaaa;
+  white-space: pre-wrap;
+  border-radius: 0.3rem;
+}
+.btn-outline-info {
+  color: #ffffff;
+  background-color: #71c184;
+  background-image: none;
+  border-color: #ffffff;
+}
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #939598;
+  border-color: #cccccc;
+}
+a {
+  color: white !important;
+  text-decoration: none;
+}
+.contraste {
+  color: #fff !important;
+  background-color: #000;
+}
+.contorno {
+  border: 1px solid #808080;
+  border-radius: 6px;
+  margin: 0 .1rem;
+  padding: .1rem .6rem;
+  text-transform: sentencecase;
+}
+
+.card-final {
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid #0F51AD;
+
+}
+
+.table td, .table th {
+    border-top: 0;
+}
+
+.table td {
+  border: 0;
+  vertical-align: middle;
+  font-family: 'Lato', sans-serif;
+    font-size: 19px;
+}
+.table thead th{
+  font-family: 'Titillium Web', sans-serif;
+  border-bottom: 1px solid #0F51AD;
+      font-size: 22px;
+    color: #0F51AD;
+}
+td.conceito-tabela {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  width: 32%;
+      font-size: 22px;
+    color: #0F51AD;
+}
+
+/* Controle de display dos elementos */
+/* .intro,
+.instrucao,
+#card1, */
+#card2,
+#card3,
+#card4,
+#card5,
+#card6,
+#card7,
+#card8,
+.questionarios,
+/* #questionario1, */
+#questionario2,
+#questionario3,
+#questionario4,
+#questionario5,
+#questionario6,
+#questionario7,
+#questionario8,
+.conclusao
+/* #parabens, */
+{
+  display: none;
+}
+
+#imprimir {
+  display: none;
+}
+
+#imprimir img {
+  width: 20%;
+  margin-bottom: 1rem;
+}
+
+.btn-imprimir {
+  text-align: right;
+  padding: 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: #005662;
+}
+
+.btn-imprimir:hover {
+  text-decoration: underline;
+}
+
+/* define configurações de impressão */
+@media print {
+
+  body * {
+    color: black;
+  }
+
+  main {
+    margin-top: 5%;
+  }
+
+  nav, footer {
+    display: none;
+  }
+
+  #imprimir, #imprimir * {
+    display: block;
+  }
+
+  .justify-content-center {
+    display: block;
+  }
+
+  h2 {
+    margin-top: 1rem;
+  }
+
+  .faixa {
+    display: none;
+  }
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+.instrucao {
+  height: 4rem;
+}
+
+.atalho-numerico {
+  display: none;
+}
+
+}
+
+@media (max-width: 767px) {
+
+.texto-resposta {
+  margin: 0;
+}
+
+.stick-parent {
+  margin-bottom: 1rem;
+  z-index: 10;
+}
+
+}
+
+@media (max-width: 575px) {
+
+  .card-altura{
+  height: 465px;
+}
+  .intro-3 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.titulo{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 2%;
+  color: #0F51AD;
+      padding-bottom: 80px;
+}
+
+h2{
+  font-size: 1.8rem;
+}
+
+.titulo, .faixa {
+  height: 65px;
+}
+
+.faixa {
+  width: 25px;
+  margin-right: 15px
+}
+
+.card-final{
+  border-radius: 0;
+  padding: 1rem;
+}
+
+}
+
+
+/* #um .front {
+background-image:url(../_ilustracoes/Nota_01.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#um .back {
+background-image:url(../_ilustracoes/Nota_01.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#dois .front {
+background-image:url(../_ilustracoes/Nota_02.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#dois .back {
+background-image:url(../_ilustracoes/Nota_02.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#tres .front {
+background-image:url(../_ilustracoes/Nota_03.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#tres .back {
+background-image:url(../_ilustracoes/Nota_03.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#quatro .front {
+background-image:url(../_ilustracoes/Nota_04.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#quatro .back {
+background-image:url(../_ilustracoes/Nota_04.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cinco .front {
+background-image:url(../_ilustracoes/Nota_05.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cinco .back {
+background-image:url(../_ilustracoes/Nota_05.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#seis .front {
+background-image:url(../_ilustracoes/Nota_06.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#seis .back {
+background-image:url(../_ilustracoes/Nota_06.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#sete .front {
+background-image:url(../_ilustracoes/Nota_07.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#sete .back {
+background-image:url(../_ilustracoes/Nota_07.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#oito .front {
+background-image:url(../_ilustracoes/Nota_08.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#oito .back {
+background-image:url(../_ilustracoes/Nota_08.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta1 .front {
+background-image:url(../_ilustracoes/Nota_02op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta2 .front {
+background-image:url(../_ilustracoes/Nota_04op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta3 .front {
+background-image:url(../_ilustracoes/Nota_05op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta4 .front {
+background-image:url(../_ilustracoes/Nota_03op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta5 .front {
+background-image:url(../_ilustracoes/Nota_01op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta6 .front {
+background-image:url(../_ilustracoes/Nota_06op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta7 .front {
+background-image:url(../_ilustracoes/Nota_07op.jpg);
+background-size: cover;
+background-position: center;
+}
+
+#cardresposta8 .front {
+background-image:url(../_ilustracoes/Nota_08op.jpg);
+background-size: cover;
+background-position: center;
+} */
+
